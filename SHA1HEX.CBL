@@ -51,7 +51,6 @@
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-      *01 WS-PRUEBAS.
        01 WS-I    PIC 9(3).
        01 WS-STM  PIC 9(8).
        01 WS-ETM  PIC 9(8).
@@ -360,6 +359,8 @@
       *
       *    The "SUBTRACT" is a kind of bug, when converting it gives
       *    the collate sequence - 192, so I adjusted it.
+      *    - Update: it's because COBOL works with EDIBDC, so making
+      *      the SUBTRACT will adapt it to ASCII collating sequence.
       *
            PERFORM VARYING WS-TEXT-INDEX FROM 1 BY 1 UNTIL
                WS-TEXT-INDEX > WS-TEXT-LENGTH
@@ -856,7 +857,6 @@
            PERFORM HEXVALUE.
       
        BINVALUE.
-      *    Pending to rename ase HEX2BIN!
       *    No loop needed here. The HEX2BIN table is filled in order
       *    That every HEX is in BIN+1 position
       *
@@ -864,7 +864,6 @@
            MOVE WS-BIN(WS-HEX2BIN-INDEX)         TO WS-BIN-KEY.
       
        HEXVALUE.
-      *    Pending to rename ase BIN2HEX!
       *    No loop needed here. The HEX2BIN table is filled in order
       *    That every HEX is in BIN+1 position
       *
