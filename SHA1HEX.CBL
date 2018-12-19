@@ -163,30 +163,7 @@
           05 WS-PROCESSING        PIC X(2560).
           05 WS-PROCESSING-WORD   REDEFINES WS-PROCESSING
                                   OCCURS 80 PIC X(32).
-      
-      *   H's (already in binary)
-          05 WS-HS.
-              10 WS-H0            PIC X(32) 
-                 VALUE '01100111010001010010001100000001'.
-              10 WS-H0-FULL       REDEFINES WS-H0
-                                  OCCURS 8 PIC X(04).
-              10 WS-H1            PIC X(32)
-                 VALUE '11101111110011011010101110001001'.
-              10 WS-H1-FULL       REDEFINES WS-H1
-                                  OCCURS 8 PIC X(04).
-              10 WS-H2            PIC X(32)
-                 VALUE '10011000101110101101110011111110'.
-              10 WS-H2-FULL       REDEFINES WS-H2
-                                  OCCURS 8 PIC X(04).
-              10 WS-H3            PIC X(32)
-                 VALUE '00010000001100100101010001110110'.
-              10 WS-H3-FULL       REDEFINES WS-H3
-                                  OCCURS 8 PIC X(04).
-              10 WS-H4            PIC X(32)
-                 VALUE '11000011110100101110000111110000'.
-              10 WS-H4-FULL       REDEFINES WS-H4
-                                  OCCURS 8 PIC X(04).
-      
+            
       *   Temporary values to make the process
           05 WS-A                 PIC X(32) VALUE SPACES.
           05 WS-B                 PIC X(32) VALUE SPACES.
@@ -281,6 +258,30 @@
           05 WS-DISPLAY-X         REDEFINES WS-DISPLAY
                                   OCCURS 40 PIC X(01).
 
+       01 WS-HS-TABLE.
+      *   H's (already in binary)
+          05 WS-HS.
+              10 WS-H0            PIC X(32) 
+                 VALUE '01100111010001010010001100000001'.
+              10 WS-H0-FULL       REDEFINES WS-H0
+                                  OCCURS 8 PIC X(04).
+              10 WS-H1            PIC X(32)
+                 VALUE '11101111110011011010101110001001'.
+              10 WS-H1-FULL       REDEFINES WS-H1
+                                  OCCURS 8 PIC X(04).
+              10 WS-H2            PIC X(32)
+                 VALUE '10011000101110101101110011111110'.
+              10 WS-H2-FULL       REDEFINES WS-H2
+                                  OCCURS 8 PIC X(04).
+              10 WS-H3            PIC X(32)
+                 VALUE '00010000001100100101010001110110'.
+              10 WS-H3-FULL       REDEFINES WS-H3
+                                  OCCURS 8 PIC X(04).
+              10 WS-H4            PIC X(32)
+                 VALUE '11000011110100101110000111110000'.
+              10 WS-H4-FULL       REDEFINES WS-H4
+                                  OCCURS 8 PIC X(04).
+      
        01 WS-TABLE.
       *   HEX2BIN
           05 WS-HEX2BIN-INDEX     PIC 9(02) VALUE ZEROES.
