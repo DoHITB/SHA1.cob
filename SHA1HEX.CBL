@@ -51,10 +51,6 @@
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       01 WS-I    PIC 9(3).
-       01 WS-STM  PIC 9(8).
-       01 WS-ETM  PIC 9(8).
-
       *Max length of block
        77 CNS-BLOCK-L             PIC 9(03)  VALUE 512.
 
