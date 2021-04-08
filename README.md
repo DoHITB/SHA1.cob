@@ -3,11 +3,16 @@ Secure Hash Algorithm - 1 (SHA1) COBOL Implementation.
                                                              
 This code was written by David O. Solé González (aka DoHITB).
                                                              
-The implementation was made following rfc3174 official text. You can find the mentioned rfc on the Internet for free, on http://www.ietf.org/rfc/rfc3174.txt                          
-                                                             
+The implementation was made following rfc3174 official text. You can find the mentioned rfc on the Internet for free, on http://www.ietf.org/rfc/rfc3174.txt
+
 For any comment, suggestion or similar, you can reach me via mail on "doscar.sole@gmail.com"                              
-                                                             
-General lines and commentaries:   
+
+
+## Important notice
+We moved to new repository: https://github.com/DoHITB/CryptoCobol
+
+
+## General lines and commentaries:   
 - This programs only works on ASCII data passed as X(n). 
                                                              
 - Once the input arrived, its transofmed into bytes.     
